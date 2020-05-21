@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes progressBar {
+    0% {
+        right: 0;
+    }
+    100% {
+        right: 100vw;
+    }
+}
