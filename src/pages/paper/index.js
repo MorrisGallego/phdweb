@@ -71,7 +71,7 @@ function Paper() {
                 </nav>
                 <p className="text-primary-200 text-4xl mt-32 select-none animate__animated animate__heartBeat">Not Found!</p>
                 <div className="p-16 sm:p-0 text-primary-200 text-2xl mt-32 sm:text-2xl select-none animate__animated animate__heartBeat">
-                    <p>The requested page does not exist, or wasn't found.</p>
+                    <p>The requested page does not exist.</p>
                     <p>You will be redirected soon.</p>
                 </div>
             </>

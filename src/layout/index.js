@@ -7,10 +7,10 @@ import 'animate.css'
 
 import Apollo from '../context/apollo'
 import Routes from "../router"
-import { AuthenticationProvider } from "../context/authentication";
 import { usePersonalInfo } from "../fetcher";
 
 const Loading = () => <p className="text-primary-200 text-xl mt-32 sm:text-4xl select-none animate__animated animate__heartBeat animate__infinite">Loading...</p>
+
 function Progress({duration}) {
     return <div className = 'fixed top-0 left-0 bg-primary-900 h-1 shadow' style = {{
         animationDuration: `${duration}ms`,
@@ -38,9 +38,7 @@ export default function Container() {
     return (
         <StrictMode>
             <Apollo>
-                <AuthenticationProvider>
-                    <Layout />
-                </AuthenticationProvider>
+                <Layout />
             </Apollo>
         </StrictMode>
     );
