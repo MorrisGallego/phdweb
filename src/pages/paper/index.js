@@ -1,7 +1,7 @@
-import React, {useEffect} from 'react';
+import React, {useEffect} from 'react'
 
-import Markdown from 'react-markdown';
-import {Link, useNavigate, useParams} from 'react-router-dom';
+import Markdown from 'react-markdown'
+import {Link, useNavigate, useParams} from 'react-router-dom'
 import {
     ArrowCircleLeftOutline,
     DocumentOutline,
@@ -15,15 +15,15 @@ import {
     AtSymbolOutline,
     GlobeOutline,
     LockClosedOutline
-} from 'heroicons-react';
+} from 'heroicons-react'
 import { Progress } from '../../layout'
 
-import { useClipboard } from 'use-clipboard-copy';
-import useWebShare from 'react-use-web-share';
-import { usePaper } from '../../fetcher';
-import { getColor } from '../../utils';
+import { useClipboard } from 'use-clipboard-copy'
+import useWebShare from 'react-use-web-share'
+import { usePaper } from '../../fetcher'
+import { getColor } from '../../utils'
 
-import '../../styles.css';
+import '../../styles.css'
 
 function Icon({type, ...props}) {
     switch (type) {

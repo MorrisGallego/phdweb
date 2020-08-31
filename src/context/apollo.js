@@ -1,7 +1,7 @@
-import { createHttpLink } from "apollo-link-http";
-import { ApolloClient, InMemoryCache } from "apollo-boost";
-import {ApolloProvider} from "react-apollo";
-import React from "react";
+import { createHttpLink } from 'apollo-link-http'
+import { ApolloClient, InMemoryCache } from 'apollo-boost'
+import {ApolloProvider} from 'react-apollo'
+import React from 'react'
 
 const TOKEN = process.env.REACT_APP_OAUTH_TOKEN
 

@@ -32,5 +32,8 @@ module.exports = {
   variants: {
     padding: ['responsive', 'last'],
     textColor: ['responsive', 'hover', 'focus', 'disabled'],
-  }
+  },
+  future: {
+    removeDeprecatedGapUtilities: true,
+  },
 }

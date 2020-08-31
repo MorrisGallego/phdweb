@@ -1,16 +1,17 @@
-import React, {useEffect} from 'react';
+import React, {useEffect} from 'react'
 
 import {
     NewspaperOutline,
     DocumentOutline,
     LibraryOutline,
     BookOpenOutline
-} from 'heroicons-react';
-import { Link } from 'react-router-dom';
+} from 'heroicons-react'
+import ReactMarkdown from 'react-markdown'
+import { Link } from 'react-router-dom'
 
 import '../../styles.css'
-import { usePapers, usePersonalInfo } from '../../fetcher';
-import { usePagination } from "../../hooks";
+import { usePapers, usePersonalInfo } from '../../fetcher'
+import { usePagination } from '../../hooks'
 
 function Icon({type, ...props}) {
     switch (type) {
@@ -33,23 +34,24 @@ function Home() {
             <h1 className = 'mt-8 mb-4 sm:mb-12 min-w-full text-center text-4xl sm:text-5xl font-hairline text-primary-900 select-none' >
                 {about?.name}
             </h1>
-            <p className = 'text-lg p-4 rounded shadow-inner text-primary-900 w-full text-justify bg-primary-100 italic'>
+            <ReactMarkdown className = 'text-lg p-4 rounded shadow-inner text-primary-900 w-full text-justify bg-primary-100'>
                 {about?.about}
-            </p>
+            </ReactMarkdown>
 
             <h2 className = 'text-primary-900 w-full text-2xl font-light mt-8 mb-4 border-b-2 select-none font-bold' >My papers</h2>
             <ul className = 'w-full list-none text-primary-900 divide-y'>
                 {
                     papers?.map( ({title, id, publisher: {type}}) => (
-                        <li className = 'py-8 last:pb-0' key = {id}>
-                            <Link to = { id }>
-                                <h2 className = 'flex items-baseline cursor-pointer hover:underline'>
-                                    <Icon type = {type} className='mr-4 flex-none' size = {24} />
-                                    <span className = 'text-2xl sm:text-3xl font-light select-none'>{title}</span>
-                                </h2>
-                            </Link>
-                        </li>
-                    ))
+                            <li className = 'py-8 last:pb-0' key = {id}>
+                                <Link to = { id }>
+                                    <h2 className = 'flex items-baseline cursor-pointer hover:underline'>
+                                        <Icon type = {type} className='mr-4 flex-none' size = {24} />
+                                        <span className = 'text-2xl sm:text-3xl font-light select-none'>{title}</span>
+                                    </h2>
+                                </Link>
+                            </li>
+                        )
+                    )
                 }
             </ul>
             <nav className = 'text-primary-300 space-x-4 mt-4 self-end'>

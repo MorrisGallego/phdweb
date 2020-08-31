@@ -1,15 +1,15 @@
-import React, {Suspense, StrictMode} from 'react';
-import {BrowserRouter as Router} from 'react-router-dom';
+import React, { Suspense, StrictMode } from 'react'
+import { BrowserRouter as Router } from 'react-router-dom'
 
-import '../styles.css';
-import 'typeface-nunito';
+import '../styles.css'
+import 'typeface-nunito'
 import 'animate.css'
 
 import Apollo from '../context/apollo'
-import Routes from "../router"
-import { usePersonalInfo } from "../fetcher";
+import Routes from '../router'
+import { usePersonalInfo } from '../fetcher'
 
-const Loading = () => <p className="text-primary-200 text-xl mt-32 sm:text-4xl select-none animate__animated animate__heartBeat animate__infinite">Loading...</p>
+const Loading = () => <p className='text-primary-200 text-xl mt-32 sm:text-4xl select-none animate__animated animate__heartBeat animate__infinite'>Loading...</p>
 
 function Progress({duration}) {
     return <div className = 'fixed top-0 left-0 bg-primary-900 h-1 shadow' style = {{

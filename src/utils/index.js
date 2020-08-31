@@ -1,5 +1,5 @@
 const publishers = {}
-const colors = ["red", "orange", "yellow", "green", "teal", "blue", "indigo", "purple", "pink", "gray"]
+const colors = ['red', 'orange', 'yellow', 'green', 'teal', 'blue', 'indigo', 'purple', 'pink', 'gray']
 
 export function getColor(publisher) {
     const usedColors = Object.values(publishers)
